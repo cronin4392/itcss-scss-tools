@@ -1,0 +1,32 @@
+@function gutter($name) {
+  @return map-get($gutters, $name);
+}
+
+@mixin responsiveGuttersCss2 {
+  padding-left: gutter(mobile);
+  padding-right: gutter(mobile);
+
+  @include minWidth(tablet) {
+    padding-left: gutter(tablet);
+    padding-right: gutter(tablet);
+  }
+
+  @include minWidth(desktop) {
+    padding-left: gutter(desktop);
+    padding-right: gutter(desktop);
+  }
+}
+
+@mixin responsiveGuttersCss3 {
+  --gutter: #{gutter(mobile)};
+  padding-left: var(-gutter);
+  padding-left: var(-gutter);
+
+  @include minWidth(tablet) {
+    --gutter: #{gutter(tablet)};
+  }
+
+  @include minWidth(desktop) {
+    --gutter: #{gutter(desktop)};
+  }
+}

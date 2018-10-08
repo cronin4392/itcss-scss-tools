@@ -1,0 +1,7 @@
+body {
+  @include fontSize(14px, 16px, 200);
+  @include responsiveGuttersCss3();
+
+  color: color(white);
+  background-color: color(black);
+}

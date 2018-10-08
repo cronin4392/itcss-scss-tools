@@ -1,0 +1,17 @@
+@function breakpoint($name) {
+  $breakpoint: map-get($breakpoints, $name);
+
+  @if($breakpoint) {
+    @return $breakpoint;
+  }
+  @else {
+    @warn "#{$name} is not a valid breakpoint";
+    @return null;
+  }
+}
+
+@mixin minWidth($breakpoint) {
+  @media (min-width: breakpoint($breakpoint)) {
+    @content;
+  }
+}

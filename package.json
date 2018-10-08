@@ -1,0 +1,15 @@
+{
+  "name": "scss-tools",
+  "version": "1.0.0",
+  "description": "A set of SCSS tools and settings using the ITCSS folder structure.",
+  "main": "src/scsss/main.scss",
+  "scripts": {
+    "build": "node-sass src/scss/main.scss build/css/main.css --output-style expanded",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stephen Cronin",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}

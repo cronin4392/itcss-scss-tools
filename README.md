@@ -19,14 +19,7 @@ $colors: (
 
 ```scss
 @function color($name) {
-  $color: map-get($colors, $name);
-  @if($color) {
-    @return $color;
-  }
-  @else {
-    @warn "#{$name} is not a valid color";
-    @return null;
-  }
+  @return map-get($colors, $name);
 }
 ```
 

@@ -1,3 +1,8 @@
+/// @access public
+/// @example
+///  .element {
+///    border-color: color(red);
+///  }
 @function color($name) {
   $color: map-get($colors, $name);
 
